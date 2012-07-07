@@ -8,7 +8,7 @@ var kotoba_file = __dirname + '/.kotoba/' + kotoba.file_name() + '.kotoba'
   , kotoba_file1 = __dirname + '/.kotoba/' + (kotoba.file_name() - 1) + '.kotoba';
 
 var exists = function() {
-  return path.existsSync(kotoba_file);
+  return fs.existsSync(kotoba_file);
 }
 
 var capture_stdout = function(cmd, callback) {

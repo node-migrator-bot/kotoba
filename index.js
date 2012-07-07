@@ -8,7 +8,7 @@ exports = module.exports = core = {};
 core.version = (JSON.parse(fs.readFileSync(__dirname + '/package.json')).version);
 
 core.create_dir = function() {
-  if (!path.existsSync(kpath)) {
+  if (!fs.existsSync(kpath)) {
     fs.mkdir(kpath, 0755, function(err) {
       if (err) throw err;
     });
